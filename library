@@ -376,10 +376,10 @@ local Compkiller = {
 };
 
 Compkiller.Colors = {
-	Highlight = Color3.fromRGB(17, 19, 23),
+	Highlight = Color3.fromRGB(129, 143, 233),
 	Toggle = Color3.fromRGB(129, 142, 233),
 	Risky = Color3.fromRGB(251, 255, 39),
-	BGDBColor = Color3.fromRGB(9, 10, 11),
+	BGDBColor = Color3.fromRGB(22, 24, 29),
 	BlockColor = Color3.fromRGB(28, 29, 34),
 	StrokeColor = Color3.fromRGB(37, 38, 43),
 	SwitchColor = Color3.fromRGB(255, 255, 255),
@@ -6330,7 +6330,7 @@ function Compkiller.new(Config : Window)
 		Tabs = {},
 		LastTab = nil,
 		IsOpen = true,
-		AlwayShowTab = false,
+		AlwayShowTab = true,
 		THREADS = {},
 		PerformanceMode = false,
 		Notify = Compkiller.newNotify()
@@ -6474,6 +6474,7 @@ function Compkiller.new(Config : Window)
 	WindowLabel.Position = UDim2.new(0, 60, 0, 17)
 	WindowLabel.Size = UDim2.new(0, 200, 0, 25)
 	WindowLabel.Font = Enum.Font.GothamBold
+ WindowLabel.RichText = true
 	WindowLabel.Text = Config.Name
 	WindowLabel.TextColor3 = Compkiller.Colors.SwitchColor
 	WindowLabel.TextSize = Config.TextSize
